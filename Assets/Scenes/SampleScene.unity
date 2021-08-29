@@ -1619,7 +1619,7 @@ GameObject:
   - component: {fileID: 898584718}
   m_Layer: 0
   m_Name: Tanz_Typ
-  m_TagString: Tanz_Typ
+  m_TagString: InteractPerson
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
