@@ -19,6 +19,7 @@ public class Inventory : MonoBehaviour
                 inventory [i] = item;
                 Debug.Log(item.name + "was added");
                 itemAdded = true;
+                item.SendMessage("DoInteraction"); //ruft die DOInteraction funktion des items auf
                 break;  //stoppt den loop, sodass nur ein Itemslot gefüllt wird
             }
         }

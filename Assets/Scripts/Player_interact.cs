@@ -18,8 +18,6 @@ public class Player_interact : MonoBehaviour
             {
                 inventory.AddItem(currentIntObject); //rufe die funktion AddItem aus dem Inventory Scrippt auf und adde das currentIntObj
             }
-
-            currentIntObject.SendMessage("DoInteraction"); //refferiert zu funktion "DoInteraction" im Script des InteractableObjects
         }
     }
     
