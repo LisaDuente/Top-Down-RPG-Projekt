@@ -5,11 +5,20 @@ using UnityEngine;
 public class Player_interact : MonoBehaviour
 {
     public GameObject currentIntObject = null; //Das object mit dem wir interagieren wollen
+    public ObjectInteraction currentIntObjScript = null; //variable to hold the script of the object
+    public Inventory inventory; //Place to hold the link to the inventory script
+
 
     void Update()
     {
         if(Input.GetButtonDown("Interact") && currentIntObject) //Wenn wir den Interactbutton e drücken und ein currentIntObj gespeichert haben, dann...
         {
+            //Check see if this object is to be stored in inventory
+            if(currentIntObjScript.inventory)
+            {
+                inventory.AddItem(currentIntObject); //rufe die funktion AddItem aus dem Inventory Scrippt auf und adde das currentIntObj
+            }
+
             currentIntObject.SendMessage("DoInteraction"); //refferiert zu funktion "DoInteraction" im Script des InteractableObjects
         }
     }
@@ -20,6 +29,7 @@ public class Player_interact : MonoBehaviour
         {
             Debug.Log(other.name);
             currentIntObject = other.gameObject;
+            currentIntObjScript = currentIntObject.GetComponent<ObjectInteraction>(); //get the script of the interactable Object and store it in the variable
 
         }
     }
