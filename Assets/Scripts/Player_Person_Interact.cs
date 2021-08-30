@@ -12,7 +12,7 @@ public class Player_Person_Interact : MonoBehaviour
         {
             if(currentPerson.name == "Tanz_Typ")
             {
-                currentPerson.SendMessage("DoDanceInteraction");
+                currentPerson.SendMessage("DoDanceInteraction");//referiert zu der Funktion DoDanceInteraction in Move_Dance_Dude
             }
             else
             {

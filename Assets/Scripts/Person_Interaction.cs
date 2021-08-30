@@ -14,9 +14,9 @@ public class Person_Interaction : MonoBehaviour
         
     }
 
-    public void DoDanceInteraction()
-        {
+    //public void DoDanceInteraction()
+        //{
             //DerTanz_Typ wird irgendwas machen
-            Debug.Log("Tanz");
-        }
+            //Debug.Log("Tanz");
+        //}
 }
