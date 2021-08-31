@@ -39,7 +39,7 @@ public class Movement_Dance_Dude : MonoBehaviour
         {
             Debug.Log("Ich gehe zur Seite");
 
-            if(rb.position.y > -2.079f)
+            if(rb.position.y > -9.2f)
             {
                 Debug.Log("Noch nicht unten");
                 movement.x = 0f;
@@ -53,7 +53,7 @@ public class Movement_Dance_Dude : MonoBehaviour
                 movement.y = 0f;
                 rb.MovePosition(rb.position + movement * speedMove * Time.fixedDeltaTime);
 
-                if(rb.position.x > -3.07f)
+                if(rb.position.x > 26.3f)
                 {
                     stop = true;
                 }
@@ -67,7 +67,7 @@ public class Movement_Dance_Dude : MonoBehaviour
                 movement.y = 1f;
                 rb.MovePosition(rb.position + movement * speedMove * Time.fixedDeltaTime);
         
-                if(rb.position.y > -1.98f)
+                if(rb.position.y > 3.0f)
                 {
                     walkUp = false;
                 }
@@ -79,7 +79,7 @@ public class Movement_Dance_Dude : MonoBehaviour
                 movement.y = -1f;
                 rb.MovePosition(rb.position + movement * speedMove * Time.fixedDeltaTime);
 
-                if(rb.position.y < -2.0f)
+                if(rb.position.y < -9.2f)
                 {
                     walkUp = true;
                 }

@@ -31,7 +31,7 @@ public class Movement_Typ : MonoBehaviour
             movement.y = 0f;
             rb.MovePosition(rb.position + movement * moveSpeed * Time.fixedDeltaTime);
             
-            if(rb.position.x < -3f)
+            if(rb.position.x < 41.0f)
             {
                 walkLeft = false;
             }
@@ -42,7 +42,7 @@ public class Movement_Typ : MonoBehaviour
             movement.y = 0f;
             rb.MovePosition(rb.position + movement * moveSpeed * Time.fixedDeltaTime);
             
-            if(rb.position.x > -2.6f)
+            if(rb.position.x > 77.0f)
             {
                 walkLeft = true;
             }
