@@ -183,6 +183,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inventory: 1
+  changeable: 0
+  searchingFor: 0
+  itemNeeded: {fileID: 0}
+  anim: {fileID: 0}
 --- !u!212 &244642527
 SpriteRenderer:
   m_ObjectHideFlags: 0
@@ -733,9 +737,10 @@ GameObject:
   - component: {fileID: 606055040}
   - component: {fileID: 606055045}
   - component: {fileID: 606055046}
+  - component: {fileID: 606055047}
   m_Layer: 0
   m_Name: Dicker_Dude_0
-  m_TagString: InteractPerson
+  m_TagString: InteractableObject
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -775,7 +780,7 @@ BoxCollider2D:
   m_Offset: {x: 0.01, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
+    pivot: {x: 0.5, y: 0}
     oldSize: {x: 0.11, y: 0.18}
     newSize: {x: 0.11, y: 0.18}
     adaptiveTilingThreshold: 0.5
@@ -865,7 +870,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 606055039}
   m_LocalRotation: {x: 0, y: 0, z: 0, w: 1}
-  m_LocalPosition: {x: -2.935, y: -2.372, z: 0}
+  m_LocalPosition: {x: -2.897, y: -2.426, z: 0}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
@@ -900,7 +905,7 @@ BoxCollider2D:
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
+    pivot: {x: 0.5, y: 0}
     oldSize: {x: 0.11, y: 0.18}
     newSize: {x: 0.11, y: 0.18}
     adaptiveTilingThreshold: 0.5
@@ -910,6 +915,23 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.2, y: 0.19}
   m_EdgeRadius: 0
+--- !u!114 &606055047
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 606055039}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 07aad2ca17af3434098dafacfec1474d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inventory: 0
+  changeable: 1
+  searchingFor: 1
+  itemNeeded: {fileID: 2010581212}
+  anim: {fileID: 606055040}
 --- !u!1 &717755995
 GameObject:
   m_ObjectHideFlags: 0
@@ -1985,9 +2007,10 @@ GameObject:
   - component: {fileID: 1221434171}
   - component: {fileID: 1221434176}
   - component: {fileID: 1221434177}
+  - component: {fileID: 1221434178}
   m_Layer: 0
   m_Name: "M\xE4del_1_0"
-  m_TagString: InteractPerson
+  m_TagString: InteractableObject
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
@@ -2008,7 +2031,7 @@ BoxCollider2D:
   m_Offset: {x: -0.01, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
+    pivot: {x: 0.5, y: 0}
     oldSize: {x: 0.12, y: 0.14}
     newSize: {x: 0.12, y: 0.14}
     adaptiveTilingThreshold: 0.5
@@ -2152,7 +2175,7 @@ BoxCollider2D:
   m_Offset: {x: 0, y: 0}
   m_SpriteTilingProperty:
     border: {x: 0, y: 0, z: 0, w: 0}
-    pivot: {x: 0.5, y: 0.5}
+    pivot: {x: 0.5, y: 0}
     oldSize: {x: 0.12, y: 0.14}
     newSize: {x: 0.12, y: 0.14}
     adaptiveTilingThreshold: 0.5
@@ -2162,6 +2185,23 @@ BoxCollider2D:
   serializedVersion: 2
   m_Size: {x: 0.18, y: 0.18}
   m_EdgeRadius: 0
+--- !u!114 &1221434178
+MonoBehaviour:
+  m_ObjectHideFlags: 0
+  m_CorrespondingSourceObject: {fileID: 0}
+  m_PrefabInstance: {fileID: 0}
+  m_PrefabAsset: {fileID: 0}
+  m_GameObject: {fileID: 1221434170}
+  m_Enabled: 1
+  m_EditorHideFlags: 0
+  m_Script: {fileID: 11500000, guid: 07aad2ca17af3434098dafacfec1474d, type: 3}
+  m_Name: 
+  m_EditorClassIdentifier: 
+  inventory: 0
+  changeable: 1
+  searchingFor: 1
+  itemNeeded: {fileID: 244642524}
+  anim: {fileID: 1221434173}
 --- !u!1 &1264281584
 GameObject:
   m_ObjectHideFlags: 0
@@ -3114,6 +3154,10 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   inventory: 1
+  changeable: 0
+  searchingFor: 0
+  itemNeeded: {fileID: 0}
+  anim: {fileID: 0}
 --- !u!61 &2010581214
 BoxCollider2D:
   m_ObjectHideFlags: 0

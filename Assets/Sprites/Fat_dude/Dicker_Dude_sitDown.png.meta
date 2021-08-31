@@ -1,16 +1,16 @@
 fileFormatVersion: 2
-guid: 50b58faf1838b9c43bc233b301b2c13d
+guid: 1421987df984d0f41be6920f30d4c6bf
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -456497116613483167
-    second: "M\xE4del_1_0"
+      213: -8002077706941916627
+    second: Dicker_Dude_sitDown_0
   - first:
-      213: -259968376120177230
-    second: "M\xE4del_1_1"
+      213: -1197474857790403910
+    second: Dicker_Dude_sitDown_1
   - first:
-      213: 70026646481384973
-    second: "M\xE4del_1_2"
+      213: -6470797445094322103
+    second: Dicker_Dude_sitDown_2
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -57,7 +57,7 @@ TextureImporter:
   spritePivot: {x: 0.5, y: 0.5}
   spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
-  spriteGenerateFallbackPhysicsShape: 0
+  spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
   alphaIsTransparency: 1
   spriteTessellationDetail: -1
@@ -112,13 +112,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: "M\xE4del_1_0"
+      name: Dicker_Dude_sitDown_0
       rect:
         serializedVersion: 2
-        x: 2
+        x: 3
         y: 1
-        width: 12
-        height: 14
+        width: 13
+        height: 18
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -126,20 +126,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 16563438a423aa9f0800000000000000
-      internalID: -456497116613483167
+      spriteID: d2a97ace8b8e2f090800000000000000
+      internalID: -8002077706941916627
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "M\xE4del_1_1"
+      name: Dicker_Dude_sitDown_1
       rect:
         serializedVersion: 2
-        x: 17
+        x: 19
         y: 1
-        width: 14
-        height: 14
+        width: 13
+        height: 18
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -147,20 +147,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2bd8588a328646cf0800000000000000
-      internalID: -259968376120177230
+      spriteID: aba01f916f6b16fe0800000000000000
+      internalID: -1197474857790403910
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "M\xE4del_1_2"
+      name: Dicker_Dude_sitDown_2
       rect:
         serializedVersion: 2
         x: 34
         y: 1
-        width: 12
-        height: 14
+        width: 13
+        height: 18
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -168,8 +168,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d06b55c2dd8c8f000800000000000000
-      internalID: 70026646481384973
+      spriteID: 940d5a7e10c1336a0800000000000000
+      internalID: -6470797445094322103
       vertices: []
       indices: 
       edges: []

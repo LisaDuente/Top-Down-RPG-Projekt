@@ -1,16 +1,16 @@
 fileFormatVersion: 2
-guid: 50b58faf1838b9c43bc233b301b2c13d
+guid: ac7e31fc06a247f43aa5aeb7bb877d15
 TextureImporter:
   internalIDToNameTable:
   - first:
-      213: -456497116613483167
-    second: "M\xE4del_1_0"
+      213: 6709862964739054129
+    second: "M\xE4del_2_0"
   - first:
-      213: -259968376120177230
-    second: "M\xE4del_1_1"
+      213: -3849243567514852565
+    second: "M\xE4del_2_1"
   - first:
-      213: 70026646481384973
-    second: "M\xE4del_1_2"
+      213: 2286908740216156328
+    second: "M\xE4del_2_2"
   externalObjects: {}
   serializedVersion: 11
   mipmaps:
@@ -57,7 +57,7 @@ TextureImporter:
   spritePivot: {x: 0.5, y: 0.5}
   spritePixelsToUnits: 100
   spriteBorder: {x: 0, y: 0, z: 0, w: 0}
-  spriteGenerateFallbackPhysicsShape: 0
+  spriteGenerateFallbackPhysicsShape: 1
   alphaUsage: 1
   alphaIsTransparency: 1
   spriteTessellationDetail: -1
@@ -112,13 +112,13 @@ TextureImporter:
     serializedVersion: 2
     sprites:
     - serializedVersion: 2
-      name: "M\xE4del_1_0"
+      name: "M\xE4del_2_0"
       rect:
         serializedVersion: 2
-        x: 2
+        x: 1
         y: 1
-        width: 12
-        height: 14
+        width: 15
+        height: 28
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -126,20 +126,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 16563438a423aa9f0800000000000000
-      internalID: -456497116613483167
+      spriteID: 13a12d8e0d83e1d50800000000000000
+      internalID: 6709862964739054129
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "M\xE4del_1_1"
+      name: "M\xE4del_2_1"
       rect:
         serializedVersion: 2
         x: 17
         y: 1
-        width: 14
-        height: 14
+        width: 15
+        height: 28
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -147,20 +147,20 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: 2bd8588a328646cf0800000000000000
-      internalID: -259968376120177230
+      spriteID: b23e1589e5db49ac0800000000000000
+      internalID: -3849243567514852565
       vertices: []
       indices: 
       edges: []
       weights: []
     - serializedVersion: 2
-      name: "M\xE4del_1_2"
+      name: "M\xE4del_2_2"
       rect:
         serializedVersion: 2
-        x: 34
+        x: 33
         y: 1
-        width: 12
-        height: 14
+        width: 15
+        height: 28
       alignment: 7
       pivot: {x: 0.5, y: 0}
       border: {x: 0, y: 0, z: 0, w: 0}
@@ -168,8 +168,8 @@ TextureImporter:
       physicsShape: []
       tessellationDetail: 0
       bones: []
-      spriteID: d06b55c2dd8c8f000800000000000000
-      internalID: 70026646481384973
+      spriteID: 8a0f156f16bbcbf10800000000000000
+      internalID: 2286908740216156328
       vertices: []
       indices: 
       edges: []

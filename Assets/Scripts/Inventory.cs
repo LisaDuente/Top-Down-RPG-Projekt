@@ -14,9 +14,9 @@ public class Inventory : MonoBehaviour
         //Finde den ersten freien Platz
         for (int i = 0; i < inventory.Length; i++) //für jede stelle in inventory solange i kleiner ist als die länge des inventory, gehe einen schritt weiter
         {
-            if (inventory [i] == null) //wenn der i-te platz im inventory nichts beinhaltet
+            if (inventory[i] == null) //wenn der i-te platz im inventory nichts beinhaltet
             {
-                inventory [i] = item;
+                inventory[i] = item;
                 Debug.Log(item.name + "was added");
                 itemAdded = true;
                 item.SendMessage("DoInteraction"); //ruft die DOInteraction funktion des items auf
@@ -29,6 +29,19 @@ public class Inventory : MonoBehaviour
         {
             Debug.Log("Inventory is full - Item not added!");
         }
+    }
+
+    public bool FindItem(GameObject item)
+    {
+        for(int i = 0; i< inventory.Length; i++)
+        {
+            if(inventory[i] == item)
+            {
+                return true; //we found the item
+            }
+        }
+        //item not found
+        return false;
     }
         
     

@@ -18,6 +18,33 @@ public class Player_interact : MonoBehaviour
             {
                 inventory.AddItem(currentIntObject); //rufe die funktion AddItem aus dem Inventory Scrippt auf und adde das currentIntObj
             }
+
+            //Check to see if this object is changeable
+            if (currentIntObjScript.changeable)
+            {
+                //check if object is searchingFor
+                if(currentIntObjScript.searchingFor)
+                {
+                    //check if itemNeeded is in inventory
+                    //search inventory for item needed, if found change the object
+                    if(inventory.FindItem(currentIntObjScript.itemNeeded))
+                    {
+                        //found the item needed
+                        currentIntObjScript.searchingFor = false;
+                        currentIntObjScript.changeAnimation();
+                        Debug.Log(currentIntObject.name + "is no longer searching for an item!");
+                    }
+                    else
+                    {
+                        Debug.Log(currentIntObject.name + "is searching for an item!");
+                    }
+                }
+                else
+                {
+                    //object is not searching 
+                    Debug.Log(currentIntObject.name + "is not searching for an item");
+                }
+            }
         }
     }
     
