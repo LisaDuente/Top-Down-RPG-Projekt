@@ -8,6 +8,7 @@ TagManager:
   - InteractPerson
   - Tanz_Typ
   - SceneChange
+  - DialogueObject
   layers:
   - Default
   - TransparentFX

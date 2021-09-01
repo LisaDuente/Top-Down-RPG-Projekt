@@ -7,6 +7,8 @@ public class Player_interact : MonoBehaviour
     public GameObject currentIntObject = null; //Das object mit dem wir interagieren wollen
     public ObjectInteraction currentIntObjScript = null; //variable to hold the script of the object
     public Inventory inventory; //Place to hold the link to the inventory script
+    public DialogTrigger triggerScript = null;
+
 
 
     void Update()
@@ -45,6 +47,12 @@ public class Player_interact : MonoBehaviour
                     Debug.Log(currentIntObject.name + "is not searching for an item");
                 }
             }
+            //check if the current object can trigger a dialogue
+            if (currentIntObjScript.dialogue)
+            {
+                //trigger the start of the dialogue in DialogTrigger
+                triggerScript.TriggerDialogue();
+            }
         }
     }
     
@@ -56,6 +64,14 @@ public class Player_interact : MonoBehaviour
             currentIntObject = other.gameObject;
             currentIntObjScript = currentIntObject.GetComponent<ObjectInteraction>(); //get the script of the interactable Object and store it in the variable
 
+        }
+
+        if (other.CompareTag("DialogueObject"))
+        {
+            Debug.Log(other.name);
+            currentIntObject = other.gameObject;
+            currentIntObjScript = currentIntObject.GetComponent<ObjectInteraction>();
+            triggerScript = currentIntObject.GetComponent<DialogTrigger>();
         }
     }
 
@@ -70,5 +86,14 @@ public class Player_interact : MonoBehaviour
             
 
         }
+
+        if (other.CompareTag("DialogueObject"))
+        {
+            if(other.gameObject == currentIntObject) 
+            {
+                currentIntObject = null; 
+            }
+        }
+
     }
 }
