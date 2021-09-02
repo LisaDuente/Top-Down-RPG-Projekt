@@ -11,4 +11,10 @@ public class DialogTrigger : MonoBehaviour
         Debug.Log("Dialog triggered!");
         FindObjectOfType<DialogManager>().StartDialogue(dialog);
     }
+
+    public void GetTheNewSentence()
+    {
+        FindObjectOfType<DialogManager>().DisplayNextSentence();
+    }
+    
 }

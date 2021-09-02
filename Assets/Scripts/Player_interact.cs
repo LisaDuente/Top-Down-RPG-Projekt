@@ -8,6 +8,7 @@ public class Player_interact : MonoBehaviour
     public ObjectInteraction currentIntObjScript = null; //variable to hold the script of the object
     public Inventory inventory; //Place to hold the link to the inventory script
     public DialogTrigger triggerScript = null;
+    public DialogManager currentDialogScript = null;
 
 
 
@@ -50,8 +51,17 @@ public class Player_interact : MonoBehaviour
             //check if the current object can trigger a dialogue
             if (currentIntObjScript.dialogue)
             {
-                //trigger the start of the dialogue in DialogTrigger
+                //trigger the start of the dialogue in DialogTrigger, conversationOn set to true
                 triggerScript.TriggerDialogue();
+
+                /*while(currentDialogScript.conversationOn)
+                {
+                    if (Input.GetButtonDown("dialogNext")) //if the r button gets pressed 
+                    {
+                        currentDialogScript.DisplayNextSentence();
+                    }
+                }*/
+                
             }
         }
     }
@@ -72,6 +82,7 @@ public class Player_interact : MonoBehaviour
             currentIntObject = other.gameObject;
             currentIntObjScript = currentIntObject.GetComponent<ObjectInteraction>();
             triggerScript = currentIntObject.GetComponent<DialogTrigger>();
+            currentDialogScript = currentIntObject.GetComponent<DialogManager>();
         }
     }
 

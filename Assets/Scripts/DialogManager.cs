@@ -8,6 +8,8 @@ public class DialogManager : MonoBehaviour
 {
     public TMP_Text nameText;
     public TMP_Text dialogueText;
+    public bool conversationOn = false;
+
 
     //keeps track of all the scentences in the dialog
     //Queue is a first in first out collection (FIFO)
@@ -23,13 +25,14 @@ public class DialogManager : MonoBehaviour
     public void StartDialogue(Dialog dialog)
     {
         Debug.Log("starting conversation with " + dialog.name);
+        conversationOn = true;
 
-        nameText.text = dialog.name;
+        //nameText.text = dialog.name;
 
         //clear all sentences
         sentences.Clear();
         //adds sentences in the queue
-        foreach(string sentence in dialog.sentences)   
+        foreach(string sentence in dialog.sentences)   //was meint das hier?
         {
             sentences.Enqueue(sentence);
         }
@@ -43,15 +46,18 @@ public class DialogManager : MonoBehaviour
             EndDialogue();
             return;
         }
-
-        string sentence = sentences.Dequeue();
-        Debug.Log(sentence);
-        dialogueText.text = sentence;
+        if (Input.GetButtonDown("dialogNext")) //if the r button gets pressed
+        {
+            string sentence = sentences.Dequeue();
+            Debug.Log(sentence);
+            //dialogueText.text = sentence;
+        }
     }
 
     public void EndDialogue()
     {
         Debug.Log("End of conversation");
+        conversationOn = false;
     }
 
    
