@@ -2065,6 +2065,7 @@ MonoBehaviour:
   currentIntObjScript: {fileID: 0}
   inventory: {fileID: 844740316}
   triggerScript: {fileID: 0}
+  currentDialogScript: {fileID: 0}
 --- !u!114 &844740315
 MonoBehaviour:
   m_ObjectHideFlags: 0
@@ -3804,9 +3805,8 @@ MonoBehaviour:
   dialog:
     name: Television
     sentences:
-    - And now the weather...
-    - Today it's going to be sunny with a few clouds.
-    - Heavy rain is to be expected on sunday.
+    - Bla
+    - Blu
 --- !u!61 &1739876094
 BoxCollider2D:
   m_ObjectHideFlags: 0

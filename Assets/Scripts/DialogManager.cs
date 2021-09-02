@@ -8,7 +8,7 @@ public class DialogManager : MonoBehaviour
 {
     public TMP_Text nameText;
     public TMP_Text dialogueText;
-    public bool conversationOn = false;
+   
 
 
     //keeps track of all the scentences in the dialog
@@ -25,40 +25,37 @@ public class DialogManager : MonoBehaviour
     public void StartDialogue(Dialog dialog)
     {
         Debug.Log("starting conversation with " + dialog.name);
-        conversationOn = true;
-
-        //nameText.text = dialog.name;
-
-        //clear all sentences
-        sentences.Clear();
-        //adds sentences in the queue
-        foreach(string sentence in dialog.sentences)   //was meint das hier?
+        //If queue is empty, fill it with sentences
+        if (sentences.Count == 0)
         {
-            sentences.Enqueue(sentence);
+            foreach(string sentence in dialog.sentences)   
+            {
+                sentences.Enqueue(sentence);
+            }
         }
+        
+        nameText.text = dialog.name; //PROBLEM
         DisplayNextSentence();
     }
 
     public void DisplayNextSentence()
     {
+        string sentence = sentences.Dequeue();
+        Debug.Log(sentence);
+        dialogueText.text = sentence; //PROBLEM
         if(sentences.Count == 0)
         {
             EndDialogue();
             return;
-        }
-        if (Input.GetButtonDown("dialogNext")) //if the r button gets pressed
-        {
-            string sentence = sentences.Dequeue();
-            Debug.Log(sentence);
-            //dialogueText.text = sentence;
-        }
+        }   
+        
+        
+        
     }
 
     public void EndDialogue()
     {
         Debug.Log("End of conversation");
-        conversationOn = false;
-    }
-
-   
+        
+    }  
 }

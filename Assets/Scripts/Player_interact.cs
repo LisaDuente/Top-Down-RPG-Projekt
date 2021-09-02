@@ -53,14 +53,6 @@ public class Player_interact : MonoBehaviour
             {
                 //trigger the start of the dialogue in DialogTrigger, conversationOn set to true
                 triggerScript.TriggerDialogue();
-
-                /*while(currentDialogScript.conversationOn)
-                {
-                    if (Input.GetButtonDown("dialogNext")) //if the r button gets pressed 
-                    {
-                        currentDialogScript.DisplayNextSentence();
-                    }
-                }*/
                 
             }
         }

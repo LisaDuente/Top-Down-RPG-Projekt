@@ -10,7 +10,7 @@ public class Dialog
     public string name;         //name of the npc we are talking to
 
     [TextArea(3, 10)]           //min and max of lines for text 
-    public Queue<string> sentences; //The scentences that we will load in the queue
+    public string[] sentences; //The scentences that we will load in the queue
 
    
 }
