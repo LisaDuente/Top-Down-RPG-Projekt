@@ -34,7 +34,7 @@ public class DialogManager : MonoBehaviour
             }
         }
         
-        nameText.text = dialog.name; //PROBLEM
+        //nameText.text = dialog.name; //PROBLEM
         DisplayNextSentence();
     }
 
@@ -42,7 +42,7 @@ public class DialogManager : MonoBehaviour
     {
         string sentence = sentences.Dequeue();
         Debug.Log(sentence);
-        dialogueText.text = sentence; //PROBLEM
+        //dialogueText.text = sentence; //PROBLEM
         if(sentences.Count == 0)
         {
             EndDialogue();

@@ -9,6 +9,7 @@ public class Player_interact : MonoBehaviour
     public Inventory inventory; //Place to hold the link to the inventory script
     public DialogTrigger triggerScript = null;
     public DialogManager currentDialogScript = null;
+    public SceneManagement sceneChangerScript = null;
 
 
 
@@ -55,6 +56,10 @@ public class Player_interact : MonoBehaviour
                 triggerScript.TriggerDialogue();
                 
             }
+            if (currentIntObjScript.isSceneChanger)
+            {
+                sceneChangerScript.ChangeToScene();
+            }
         }
     }
     
@@ -75,6 +80,12 @@ public class Player_interact : MonoBehaviour
             currentIntObjScript = currentIntObject.GetComponent<ObjectInteraction>();
             triggerScript = currentIntObject.GetComponent<DialogTrigger>();
             currentDialogScript = currentIntObject.GetComponent<DialogManager>();
+        }
+        if (other.CompareTag("SceneChange"))
+        {
+            currentIntObject = other.gameObject;
+            currentIntObjScript = currentIntObject.GetComponent<ObjectInteraction>();
+            sceneChangerScript = currentIntObject.GetComponent<SceneManagement>();
         }
     }
 
