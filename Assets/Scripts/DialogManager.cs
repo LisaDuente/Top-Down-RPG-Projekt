@@ -8,6 +8,7 @@ public class DialogManager : MonoBehaviour
 {
     public TMP_Text nameText;
     public TMP_Text dialogueText;
+    public GameObject canvas;
    
 
 
@@ -32,6 +33,7 @@ public class DialogManager : MonoBehaviour
             {
                 sentences.Enqueue(sentence);
             }
+            canvas.SetActive(true);
         }
         
         //nameText.text = dialog.name; //PROBLEM
@@ -41,21 +43,15 @@ public class DialogManager : MonoBehaviour
     public void DisplayNextSentence()
     {
         string sentence = sentences.Dequeue();
+        ShowingText showingText = canvas.GetComponent<ShowingText>();
+        showingText.displayText(sentence);
         Debug.Log(sentence);
         //dialogueText.text = sentence; //PROBLEM
-        if(sentences.Count == 0)
-        {
-            EndDialogue();
-            return;
-        }   
-        
-        
-        
     }
 
     public void EndDialogue()
     {
         Debug.Log("End of conversation");
-        
+        canvas.SetActive(false);
     }  
 }
