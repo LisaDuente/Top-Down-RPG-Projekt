@@ -283,8 +283,6 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 411e0bc35bbb5ba4990e4ec5b6b157f0, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
-  nameText: {fileID: 0}
-  dialogueText: {fileID: 0}
   canvas: {fileID: 1322652869}
 --- !u!4 &121251585
 Transform:
@@ -3663,8 +3661,9 @@ MonoBehaviour:
   dialog:
     name: Television
     sentences:
-    - Bla
-    - Blu
+    - Und nun zum Wetter...
+    - 'Heute wird es regnen. Den ganzen Tag. '
+    - Bleibt lieber drinnen und trinkt einen warmen Tee!
 --- !u!61 &1739876094
 BoxCollider2D:
   m_ObjectHideFlags: 0

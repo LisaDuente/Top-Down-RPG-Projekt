@@ -6,8 +6,6 @@ using TMPro;
 
 public class DialogManager : MonoBehaviour
 {
-    public TMP_Text nameText;
-    public TMP_Text dialogueText;
     public GameObject canvas;
    
 
@@ -23,9 +21,8 @@ public class DialogManager : MonoBehaviour
 
     }
 
-    public void StartDialogue(Dialog dialog)
+    public void FillDialogueQueue(Dialog dialog)
     {
-        Debug.Log("starting conversation with " + dialog.name);
         //If queue is empty, fill it with sentences
         if (sentences.Count == 0)
         {
@@ -33,20 +30,28 @@ public class DialogManager : MonoBehaviour
             {
                 sentences.Enqueue(sentence);
             }
-            canvas.SetActive(true);
         }
-        
+    }
+
+    public void StartDialogue(Dialog dialog)
+    {
+        Debug.Log("starting conversation with " + dialog.name); 
         //nameText.text = dialog.name; //PROBLEM
+        canvas.SetActive(true);
         DisplayNextSentence();
     }
 
     public void DisplayNextSentence()
     {
-        string sentence = sentences.Dequeue();
-        ShowingText showingText = canvas.GetComponent<ShowingText>();
-        showingText.displayText(sentence);
-        Debug.Log(sentence);
-        //dialogueText.text = sentence; //PROBLEM
+        if(sentences.Count != 0)
+        {
+            string sentence = sentences.Dequeue();
+            ShowingText showingText = canvas.GetComponent<ShowingText>();
+            showingText.displayText(sentence);
+            Debug.Log(sentence);
+        }
+        
+        
     }
 
     public void EndDialogue()

@@ -78,6 +78,7 @@ public class Player_interact : MonoBehaviour
             currentIntObject = other.gameObject;
             currentIntObjScript = currentIntObject.GetComponent<ObjectInteraction>();
             triggerScript = currentIntObject.GetComponent<DialogTrigger>();
+            triggerScript.TriggerFillDialogue();
         }
         if (other.CompareTag("SceneChange"))
         {
@@ -95,8 +96,6 @@ public class Player_interact : MonoBehaviour
             {
                 currentIntObject = null; //Wird das current auf null zurückgesetzt
             }
-            
-
         }
 
         if (other.CompareTag("DialogueObject"))

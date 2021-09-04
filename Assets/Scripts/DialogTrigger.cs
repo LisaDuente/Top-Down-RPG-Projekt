@@ -21,5 +21,10 @@ public class DialogTrigger : MonoBehaviour
     {
         FindObjectOfType<DialogManager>().EndDialogue();
     }
+
+    public void TriggerFillDialogue()
+    {
+        FindObjectOfType<DialogManager>().FillDialogueQueue(dialog);
+    }
     
 }
