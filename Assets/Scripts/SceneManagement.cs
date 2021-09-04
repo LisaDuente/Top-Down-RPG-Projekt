@@ -5,8 +5,11 @@ using UnityEngine.SceneManagement;
 
 public class SceneManagement : MonoBehaviour
 {
+    GameObject spawnPoint;
+
     public void ChangeToScene()
     {
         SceneManager.LoadScene("OutdoorScene");
+        //FindObjectOfType<Movement>().SetSpawnPoint(spawnPoint);
     }
 }
