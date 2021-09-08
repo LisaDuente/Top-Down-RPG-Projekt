@@ -9,7 +9,7 @@ public class ObjectInteraction : MonoBehaviour
     public bool changeable; //if true, object can be changed through items in inventory
     public bool searchingFor; //if true, object is in need of an other object
     public bool dialogue;   //if the object triggers a dialogue
-    public GameObject itemNeeded;   //Item that is needed for interaction
+    public string itemNeeded;   //Item that is needed for interaction
     public Animator anim;   //provides a link to the Animator
     
     public void DoInteraction()
