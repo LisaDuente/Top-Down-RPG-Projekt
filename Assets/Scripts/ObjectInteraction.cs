@@ -23,4 +23,14 @@ public class ObjectInteraction : MonoBehaviour
         anim.SetBool("notSearching", true);
         dialogue = false;
     }
+
+    /* public void SaveBools()
+    {
+        SaveSystem.Instance.isSearchingFor = searchingFor;
+    }
+
+    void Start()
+    {
+        SaveBools();
+    }*/
 }

@@ -1509,7 +1509,7 @@ MonoBehaviour:
   changeable: 1
   searchingFor: 1
   dialogue: 0
-  itemNeeded: 
+  itemNeeded: Donut
   anim: {fileID: 606055040}
 --- !u!1 &708069470
 GameObject:
@@ -2370,6 +2370,7 @@ MonoBehaviour:
   - 
   - 
   - 
+  isSearchingFor: 0
 --- !u!1 &1016104403
 GameObject:
   m_ObjectHideFlags: 0
@@ -2908,7 +2909,7 @@ MonoBehaviour:
   changeable: 1
   searchingFor: 1
   dialogue: 0
-  itemNeeded: 
+  itemNeeded: Hase
   anim: {fileID: 1221434173}
 --- !u!1 &1322652869
 GameObject:

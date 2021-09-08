@@ -7,6 +7,7 @@ public class SaveSystem : MonoBehaviour
    public static SaveSystem Instance;
 
    public string[] inventorySaveSystem;
+   public bool isSearchingFor;
    
 
    void Awake()

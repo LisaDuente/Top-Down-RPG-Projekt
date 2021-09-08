@@ -35,6 +35,7 @@ public class Player_interact : MonoBehaviour
                         //found the item needed
                         currentIntObjScript.searchingFor = false;
                         currentIntObjScript.changeAnimation();
+                        inventory.RemoveItem(currentIntObjScript.itemNeeded);
                         Debug.Log(currentIntObject.name + "is no longer searching for an item!");
                     }
                     else

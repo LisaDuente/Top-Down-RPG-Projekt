@@ -45,6 +45,17 @@ public class Inventory : MonoBehaviour
         return false;
     }
 
+    public void RemoveItem(string itemName)
+    {
+        for(int i = 0; i< inventory.Length; i++)
+        {
+            if(inventory[i] == itemName)
+            {
+                inventory[i] = null;
+            }
+        }
+    }
+
     public void SaveInventory()
     {
         SaveSystem.Instance.inventorySaveSystem = inventory;
@@ -53,7 +64,5 @@ public class Inventory : MonoBehaviour
     void Start()
     {
         SaveInventory();
-    }
-        
-    
+    }    
 }
